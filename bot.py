@@ -29,7 +29,7 @@ async def on_message(message):
             chan = message.channel
             if len(message.embeds) == 0:
                 await client.delete_message(message)
-                em = discord.Embed(colour=colour)
+                em = discord.Embed(colour=discord.Colour(colour))
                 em = em.set_author(name=client.user, icon_url=client.user.avatar_url)
                 em = em.add_field(name='\u200b', value=val, inline=True)
 
