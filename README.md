@@ -8,7 +8,7 @@ This bot was written for the purpose of sending embeds as messages on Discord.
 
 # Instructions.
 1. Download this repository by clicking the green download button on the top right and choose the .ZIP option. Open the .ZIP file and drag the extracted folder to your Desktop.
-2. Go to the (python dowloads page)[https://www.python.org/downloads/] and install the latest version of Python 3. **DON'T INSTALL PYTHON 2.** Once the installation is complete, open your Applications folder (on your dock); open the Python 3.6 folder, then click the "Install Ce...ommand". Wait for it to complete.
+2. Go to the [python dowloads page](https://www.python.org/downloads/) and install the latest version of Python 3. **DON'T INSTALL PYTHON 2.** Once the installation is complete, open your Applications folder (on your dock); open the Python 3.6 folder, then click the "Install Ce...ommand". Wait for it to complete.
 
 3. Open the Command Line, (Terminal) on your laptop, and copy+paste the following code:
 ```
