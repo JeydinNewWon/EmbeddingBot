@@ -12,7 +12,7 @@ for line in f:
 
 token = user_info[0]
 username = user_info[1]
-colour = user_info[2]
+colour = int(user_info[2])
 
 @client.event
 async def on_ready():
