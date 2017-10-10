@@ -3,6 +3,17 @@ import asyncio
 
 client = discord.Client()
 
+f = open('configs.txt')
+user_info = []
+for line in f:
+    pure_line = line.rstrip()
+    x, y = pure_line.split(':')
+    user_info.append(y)
+
+token = user_info[0]
+username = user_info[1]
+colour = user_info[2]
+
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -13,12 +24,12 @@ async def on_ready():
 @client.event
 async def on_message(message):
     try:
-        if str(message.author) == 'JeydinNewWon#4863':
+        if str(message.author) == username:
             val = message.content
             chan = message.channel
             if len(message.embeds) == 0:
                 await client.delete_message(message)
-                em = discord.Embed(colour=discord.Colour(16715599))
+                em = discord.Embed(colour=colour)
                 em = em.set_author(name=client.user, icon_url=client.user.avatar_url)
                 em = em.add_field(name='\u200b', value=val, inline=True)
 
@@ -28,4 +39,4 @@ async def on_message(message):
                 return
     except discord.errors:
         pass
-client.run('mfa.TUQVZ71aekMXwdve4KNFw5wXcDPzZR0Xs2qlV0UugoheyoVEzzqdvHvfHJgNpDZHS1A_2sA9IOBvE0lcKdx4', bot=False)
+client.run(token, bot=False)
